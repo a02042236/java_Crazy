@@ -64,7 +64,6 @@ class MyPersonClass
 		sex = _sex;
 		personNum ++;　// 这是一种非常不好的操作方式，在实例的方法中操作类数据。
 	}
-
 	
 	public MyPersonClass(int _age, String _name, String _sex)
 	{
@@ -72,7 +71,6 @@ class MyPersonClass
 		sex = _sex;
 		personNum ++; // 这是一种非常不好的操作方式，在实例的方法中操作类数据。
 	}
-
 
 	public void printInfo()
 	{

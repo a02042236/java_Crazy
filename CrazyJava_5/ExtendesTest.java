@@ -10,8 +10,6 @@ class son extends father
 	private String a = "son string";
 }
 
-
-
 public class ExtendsTest
 {
 
@@ -23,5 +21,4 @@ public class ExtendsTest
 
 		System.out.println(father.a);
 	}
-
 }

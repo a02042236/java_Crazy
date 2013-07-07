@@ -2,10 +2,9 @@
 
 public class Apple extends MyFruit
 {
-	static String typeName = "apple";
-	
+	static String typeName = "apple";	
 
-	public void setName()
+	public void setName() //重写，覆盖了父类的setName
 	{
 		this.name = typeName;
 	}
@@ -14,8 +13,6 @@ public class Apple extends MyFruit
 	{
 		this.setName();
 	}
-
-
 
 	public static void main(String[] args)
 	{
@@ -33,5 +30,4 @@ public class Apple extends MyFruit
 		
 		MyFruit.classInfo();
 	}
-
 }
