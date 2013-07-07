@@ -1,3 +1,6 @@
+import sub.PackageTest;
+import static sub.PackageTest.*; //导入了类的feild和方法
+
 /**
 * 2013.06.26 一个基本的类构造以及使用: class MyPersonClass
 */
@@ -34,6 +37,16 @@ public class MyPerson
 
 		/*释放实例指向的空间*/
 		Wangbao = null;
+
+		/**
+		* 使用其他包的类
+		*/
+		PackageTest test = new PackageTest("MyPerson.main");
+		test.printCallerName();
+		PackageTest.printAllCallers();
+
+		System.out.println(callerNum); // import static sub.PackageTest.*; //导入了类的feild和方法
+		System.out.println("End");
 	}
 }
 
@@ -44,14 +57,20 @@ class MyPersonClass
 	String name;
 	private String sex;
 
-
-	
 	public MyPersonClass(int _age, String _name, String _sex)
 	{
 		age = _age;
 		name = _name;
 		sex = _sex;
 		personNum ++;　// 这是一种非常不好的操作方式，在实例的方法中操作类数据。
+	}
+
+	
+	public MyPersonClass(int _age, String _name, String _sex)
+	{
+		this(_age, _name);	//在构造器中调用另外一个构造器
+		sex = _sex;
+		personNum ++; // 这是一种非常不好的操作方式，在实例的方法中操作类数据。
 	}
 
 
